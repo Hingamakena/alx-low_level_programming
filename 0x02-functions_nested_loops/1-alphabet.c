@@ -3,15 +3,14 @@
 /**
  * print_alphabet - Entry point
  *
- * Return: (0) Always success
+ * Return: void
  */
 void print_alphabet(void)
 {
 	int i = 97;
 
 	for (; i < 123; i++)
-		putchar(i);
+		_putchar(i);
 
-	putchar('\n');
-	return (0);
+	_putchar('\n');
 }
