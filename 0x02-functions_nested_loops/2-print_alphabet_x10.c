@@ -7,18 +7,18 @@
  */
 void print_alphabet_x10(void)
 {
-	int alp = 97;
-	int i = 0;
+	char alp = 97;
+	char i = 0;
 
-	while (i < 10)
+	while (i < 9)
 	{
-		i++;
+		alp = 97;
 		while (alp < 123)
 		{
 			putchar(alp);
 			alp++;
 		}
+		i++;
+		putchar('\n');
 	}
-
-	putchar('\n');
 }
