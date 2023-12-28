@@ -8,7 +8,7 @@
  */
 int print_last_digit(int p)
 {
-	int last;
+	char last;
 
 	if (p < 0)
 	{
@@ -16,7 +16,7 @@ int print_last_digit(int p)
 	}
 	else if (p == 0)
 	{
-		return (p);
+		p = p * 0;
 	}
 	else
 	{
@@ -28,5 +28,5 @@ int print_last_digit(int p)
 	putchar(last + '0');
 	putchar ('\n');
 
-	return (0);
+	return (last);
 }
