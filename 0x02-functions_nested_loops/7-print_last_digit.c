@@ -28,6 +28,4 @@ int print_last_digit(int p)
 	putchar(last + '0');
 
 	return (last);
-
-	putchar ('\n');
 }
