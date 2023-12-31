@@ -11,7 +11,14 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		printf("%d ", i);
+		if (i % 3 == 0)
+		{
+			printf("Fizz ");
+		}
+		else
+		{
+			printf("%d ", i);
+		}
 	}
 	putchar('\n');
 
