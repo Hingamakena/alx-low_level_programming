@@ -5,10 +5,11 @@ char *_strcat(char *dest, char *src)
 	int i = 0;
 	int j = 0;
 
-	while (i < src[i])
+	for (; src[i] != '\0'; i++)
+		;
+	for (; dest[j] != '\0'; j++)
 	{
 		src[i] = dest[i + j];
-		i++;
 	}
 	dest[j] = '\0';
 }
