@@ -13,6 +13,11 @@ char *_strncpy(char *dest, char *src, int n)
 	int i = 0;
 	int j = 0;
 
+	if (dest != NULL)
+	{
+		return (0);
+	}
+
 	while (src[i] < n)
 	{
 		src[i] = dest[j];
