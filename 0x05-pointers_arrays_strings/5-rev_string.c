@@ -31,7 +31,7 @@ void rev_string(char *s)
 		temp = *bgnptr;
 		*bgnptr = *endptr;
 		*endptr = temp;
-	
+
 		bgnptr++;
 		endptr--;
 	}
