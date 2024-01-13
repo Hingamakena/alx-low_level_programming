@@ -11,10 +11,10 @@ int main(int argc, __attribute__((unused))char *argv[])
 {
 	int i;
 
-	for (i = 1; i < argc; i++)
+	for (i = 0; i < argc - 1; i++)
 		;
 
 	printf("%d\n", i);
 
-	return (0);
+	return (i);
 }
