@@ -27,6 +27,26 @@ int main(int argc, char *argv[])
 	{
 		printf("%d\n", value / 25);
 	}
+	else if ((value % 25) == 15)
+	{
+		printf("%d\n", ((value / 25) + ((value % 25) / 15)));
+	}
+	else if ((value % 25) == 10)
+	{
+		printf("%d\n", ((value / 25) + ((value % 25) / 10)));
+	}
+	else if ((value % 25) == 5)
+	{
+		printf("%d\n", (value % 25) + ((value % 25) / 5));
+	}
+	else if ((value % 25) == 2)
+	{
+		printf("%d\n", (value % 25) + ((value % 25) / 2));
+	}
+	else
+	{
+		printf("so far its good, still pressing on well\n");
+	}
 
 	return (0);
 }
