@@ -11,7 +11,6 @@
 int main(int argc, char *argv[])
 {
 	int i, value;
-	int array[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -24,7 +23,10 @@ int main(int argc, char *argv[])
 		value = atoi(argv[1]);
 	}
 
-	printf("%d\n", value);
+	if (value % 25 == 0)
+	{
+		printf("%d\n", value / 25);
+	}
 
 	return (0);
 }
