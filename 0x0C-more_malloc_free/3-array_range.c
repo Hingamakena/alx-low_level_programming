@@ -22,7 +22,7 @@ int *array_range(int min, int max)
 	if (array == NULL)
 		return (NULL);
 
-	return (array);
-
 	free(array);
+
+	return (array);
 }
