@@ -16,7 +16,7 @@ void *malloc_checked(unsigned int b)
 	{
 		WEXITSTATUS(98);
 	}
-	return (space);
-
 	free(space);
+
+	return (space);
 }
