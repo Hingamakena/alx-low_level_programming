@@ -14,7 +14,9 @@ void *malloc_checked(unsigned int b)
 
 	if (space == NULL)
 	{
-		exit(98);
+		WEXITSTATUS(98);
 	}
 	return (space);
+
+	free(space);
 }
