@@ -23,4 +23,6 @@ int *array_range(int min, int max)
 		return (NULL);
 
 	return (array);
+
+	free(array);
 }
