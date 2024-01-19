@@ -13,9 +13,16 @@ char *_strdup(char *str)
 
 	nwstr = malloc(sizeof(str));
 
+	if (nwstr == NULL)
+		return (NULL);
+
+	if (str == NULL)
+		return (NULL);
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		nwstr[i] = str[i];
 	}
+	free(nwstr);
 	return (nwstr);
 }
