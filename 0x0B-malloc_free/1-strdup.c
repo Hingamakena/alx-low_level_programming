@@ -23,5 +23,7 @@ char *_strdup(char *str)
 	{
 		nwstr[i] = str[i];
 	}
+	str[i] = '\0';
+
 	return (nwstr);
 }
