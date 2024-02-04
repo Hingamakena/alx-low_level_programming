@@ -8,11 +8,18 @@
  */
 size_t print_list(const list_t *h)
 {
+	size_t count;
+
 	if (h == NULL)
 		return (0);
 
-	printf("[%u] %s", h->len, h->str);
+	while (h != NULL)
+	{
+		count ++;
+		printf("[%u] %s", h->len, h->str);
+		h = h->next;
+	}
 
-	return (0);
+	return (count);
 
 }
