@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_last_digit - prints last digit
@@ -8,24 +9,16 @@
  */
 int print_last_digit(int p)
 {
-	int last;
+	int k;
 
 	if (p < 0)
 	{
 		p = p * -1;
 	}
-	else if (p == 0)
-	{
-		p = p * 0;
-	}
-	else
-	{
-		p = p * 1;
-	}
 
-	last = p % 10;
+	k = p % 10;
 
-	putchar(last + '0');
+	_putchar('0' + k);
 
-	return (last);
+	return (k);
 }
