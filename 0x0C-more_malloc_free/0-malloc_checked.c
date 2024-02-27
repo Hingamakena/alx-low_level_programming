@@ -10,7 +10,7 @@ void *malloc_checked(unsigned int b)
 {
 	char *space;
 
-	space = malloc(sizeof(b));
+	space = malloc(sizeof(char) * b);
 
 	if (space == NULL)
 	{
