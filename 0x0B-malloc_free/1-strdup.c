@@ -1,5 +1,6 @@
 #include "main.h"
-
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * _strdup - duplicate a string
  * @str: string
@@ -8,22 +9,22 @@
  */
 char *_strdup(char *str)
 {
+	char *mem;
+
 	int i = 0;
-	char *nwstr;
+	int j = 0;
+	int k = 0;
 
-	nwstr = malloc(strlen(str) + 1);
+	for (; str[i] != '\0'; i++)
+		;
 
-	if (nwstr == NULL)
-		return (NULL);
+	mem = malloc(sizeof(char) * i);
 
-	if (str == NULL)
-		return (NULL);
-
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[j] != '\0')
 	{
-		nwstr[i] = str[i];
+		mem[k] = str[j];
+		j++;
+		k++;
 	}
-	str[i] = '\0';
-
-	return (nwstr);
+	return (mem);
 }
