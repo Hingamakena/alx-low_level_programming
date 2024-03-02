@@ -1,5 +1,6 @@
 #include "main.h"
 
+int _strlen(char *str);
 /**
  * str_concat - concatenate two strings
  * @s1: string one
@@ -9,28 +10,43 @@
  */
 char *str_concat(char *s1, char *s2)
 {
+	int i = 0;
+	int j = 0;
+	int k = 0;
 	char *s12;
 
-	int i, j, k = 0;
+	s12 = malloc(sizeof(char) * (_strlen(s1) + 1) +
+			sizeof(char) * (_strlen(s2) + 1));
 
-	for (i = 0; s1[i] != '\0'; i++)
-		;
-
-	for (j = 0; s2[j] != '\0'; j++)
-		;
-
-	s12 = malloc((sizeof(char) * (i + 1)) + (sizeof(char) * (j + 1)));
-
-	while (s1[i] != '\0' && s2[j] != '\0')
+	while (s1[i] != '\0')
 	{
-		s12[k] = s1[i] + s2[j];
+		s12[i] = s1[j];
+		i++;
+		j++;
+	}
+
+	while (s2[j] != '\0')
+	{
+		s12[i + j] = s2[k];
 		i++;
 		j++;
 		k++;
 	}
-
-	if (s12 == NULL)
-		return (NULL);
-
 	return (s12);
+}
+
+/**
+ * _strlen - finds the length of a sting
+ * @str: string
+ *
+ * Return: length
+ */
+int _strlen(char *str)
+{
+	int i = 0;
+
+	for (; str[i] != '\0'; i++)
+		;
+
+	return (i);
 }
