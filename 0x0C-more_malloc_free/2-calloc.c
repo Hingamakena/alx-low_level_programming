@@ -9,6 +9,8 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	unsigned int i = 0;
+
 	unsigned int *space = NULL;
 
 	space = malloc(sizeof(int) * size);
@@ -22,6 +24,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0)
 		return (NULL);
 
+	for (; i < size; i++)
+	{
+		space[i] = nmemb;
+		i++;
+	}
 
 	return (space);
 
