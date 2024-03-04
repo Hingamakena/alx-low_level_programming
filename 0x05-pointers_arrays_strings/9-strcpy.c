@@ -12,15 +12,13 @@ char *_strcpy(char *dest, char *src)
 	int i = 0;
 	int j = 0;
 
-	while (src[i] != '\0' && dest[j] != '\0')
+	while (src[i] != '\0')
 	{
-		src[i] = dest[j];
+		dest[j] = src[i];
 		i++;
 		j++;
 	}
 	dest[j] = '\0';
-
-	_putchar('\n');
 
 	return (dest);
 }
