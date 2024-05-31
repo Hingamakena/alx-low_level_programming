@@ -15,7 +15,7 @@ int print_last_digit(int p)
 	{
 		if (p == INT_MIN)
 		{
-			k = (unsigned int)(-(long long)p % 10);
+			k = (unsigned int)(-(long)p % 10);
 		}
 		else
 		{
