@@ -13,7 +13,15 @@ int print_last_digit(int p)
 
 	if (p < 0)
 	{
-		p = p * -1;
+		if (p == INT_MIN)
+		{
+			k = (unsigned int)(-(long long)p % 10);
+		}
+		else
+		{
+			p = -p;
+			k = p % 10;
+		}
 	}
 
 	k = p % 10;
